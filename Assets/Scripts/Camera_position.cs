@@ -3,12 +3,13 @@ using System.Collections;
 
 public class Camera_position : MonoBehaviour {
 
+
 	public GameObject		Player;
 
 	private Vector3		_position;
 	
 	void Update () {
 		_position = Player.transform.position;
-		transform.position = new Vector3(_position.x, _position.y + 45f, _position.z - 37f);
+		transform.position = new Vector3(_position.x, _position.y + 25f, _position.z - 20f);
 	}
 }
