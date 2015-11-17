@@ -45,14 +45,22 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Sardine\Scripts\IwasiMove.cs" />
+     <Compile Include="Assets\Sardine\Scripts\IwasiOcean.cs" />
+     <Compile Include="Assets\Sardine\Scripts\IwasiRigid.cs" />
+     <Compile Include="Assets\Sardine\Scripts\SardineCameraScript.cs" />
+     <Compile Include="Assets\Sardine\Scripts\SardineCharacter.cs" />
+     <Compile Include="Assets\Sardine\Scripts\SardineUserController.cs" />
      <Compile Include="Assets\Scripts\Camera_position.cs" />
      <Compile Include="Assets\Scripts\CheckAnimations.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\MenuStatHandler.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\Sardine.cs" />
      <Compile Include="Assets\Scripts\Spawn.cs" />
      <Compile Include="Assets\Scripts\Stat.cs" />
      <Compile Include="Assets\Scripts\UpdateSlider.cs" />
+     <None Include="Assets\Sardine\ReadMe.txt" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
