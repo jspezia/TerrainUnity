@@ -10,6 +10,6 @@ public class Camera_position : MonoBehaviour {
 	
 	void Update () {
 		_position = Player.transform.position;
-		transform.position = new Vector3(_position.x, _position.y + 25f, _position.z - 20f);
+		transform.position = new Vector3(_position.x, _position.y + 50f, _position.z - 40f);
 	}
 }
