@@ -11,10 +11,11 @@ public class Enemy : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		nav = GetComponent<NavMeshAgent> ();
+		nav = GetComponent<NavMeshAgent>();
 		anim = GetComponent<Animator>();
 		nav.speed = 12;
 		stats = GetComponent<Stat> ();
+		nav.destination = transform.position;
 	}
 	
 	// Update is called once per frame
@@ -48,11 +49,10 @@ public class Enemy : MonoBehaviour {
 
 		// /!\ Walk Annimation broken
 
-		if (transform.position != nav.destination) {
+		if (Vector3.Distance(transform.position, nav.destination) > 5f)
 			anim.SetBool ("running", true);
-		} else {
+		else
 			anim.SetBool ("running", false);
-		}
 		if (GetComponent<Stat>().HP <= 0 && !anim.GetBool("dead")) {
 			t0 = Time.time;
 			anim.SetTrigger("death");
