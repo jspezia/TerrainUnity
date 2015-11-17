@@ -41,13 +41,14 @@ public class Player : MonoBehaviour {
 
 		//RAYCAST
 		_ray  = Camera.main.ScreenPointToRay(Input.mousePosition);
-		Debug.DrawRay(_ray.origin, _ray.direction * 10f, Color.red);
+		Debug.DrawRay(_ray.origin, _ray.direction * 100f, Color.red);
 
 		if (Input.GetMouseButtonDown (0)) {
 			// anim.SetBool ("attacking", false);
 			if (Physics.Raycast(_ray, out _rayHit)) {
 				Vector3		point = _rayHit.point;
-				if (_rayHit.collider.gameObject.layer == LayerMask.NameToLayer("Ennemy")) {
+				// if (_rayHit.collider.gameObject.layer == LayerMask.NameToLayer("Ennemy")) {
+				if (_rayHit.collider.gameObject.tag == "Ennemy") {
 					target = _rayHit.collider.gameObject;
 					nav.destination = target.transform.position;
 				}
@@ -77,7 +78,7 @@ public class Player : MonoBehaviour {
 		// }
 
 		//MOUVEMENTS
-		if (target && Vector3.Distance(transform.position, target.transform.position) < 1.2f) {
+		if (target && Vector3.Distance(transform.position, target.transform.position) < 5f) {
 			nav.destination = transform.position;
 			Vector3 _direction = (target.transform.position - transform.position);
 			transform.rotation = Quaternion.LookRotation(_direction);
