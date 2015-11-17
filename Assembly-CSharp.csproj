@@ -60,6 +60,10 @@
      <Compile Include="Assets\Scripts\Spawn.cs" />
      <Compile Include="Assets\Scripts\Stat.cs" />
      <Compile Include="Assets\Scripts\UpdateSlider.cs" />
+<<<<<<< HEAD
+=======
+     <Compile Include="Assets\Scripts\WeaponGen.cs" />
+>>>>>>> 2b92fc26cde7784bc2d65dc8db20d3440d0a2ccc
      <Compile Include="Assets\Skeleton.cs" />
      <None Include="Assets\Sardine\ReadMe.txt" />
  <Reference Include="UnityEngine.Networking">
