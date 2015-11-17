@@ -20,6 +20,8 @@ public class Enemy : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (anim.GetBool ("dead")) {
+			if (Time.time - t0 > 3f)
+				Destroy(gameObject);
 			return;
 		}
 
@@ -28,7 +30,7 @@ public class Enemy : MonoBehaviour {
 			nav.destination = target.transform.position;
 			Vector3 _direction = (target.transform.position - transform.position);
 			transform.rotation = Quaternion.LookRotation(_direction);
-			if (Vector3.Distance(transform.position, target.transform.position) < 1.2f) {
+			if (Vector3.Distance(transform.position, target.transform.position) < 5f) {
 				nav.destination = transform.position;
 				if (!anim.GetBool("attacking")) {
 					anim.SetTrigger("attack");
@@ -52,6 +54,7 @@ public class Enemy : MonoBehaviour {
 			anim.SetBool ("running", false);
 		}
 		if (GetComponent<Stat>().HP <= 0 && !anim.GetBool("dead")) {
+			t0 = Time.time;
 			anim.SetTrigger("death");
 			anim.SetBool ("dead", true);
 		}

@@ -3,15 +3,16 @@ using System.Collections;
 
 public class Stat : MonoBehaviour {
 
-	public int STR = 10;
-	public int AGI = 10;
-	public int CON = 10;
-	public int Armor = 1;
-	public int XP = 0;
-	public int money;
-	public int HP;
-	public int level;
-	public int characs;
+	public int 		STR = 10;
+	public int 		AGI = 10;
+	public int 		CON = 10;
+	public int 		Armor = 1;
+	public int 		XP = 0;
+	public int 		money;
+	public int 		HP;
+	public int 		level;
+	public int 		characs;
+	public string	name;
 
 	// Use this for initialization
 	void Start () {
