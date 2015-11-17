@@ -60,6 +60,8 @@
      <Compile Include="Assets\Scripts\Spawn.cs" />
      <Compile Include="Assets\Scripts\Stat.cs" />
      <Compile Include="Assets\Scripts\UpdateSlider.cs" />
+     <Compile Include="Assets\Scripts\WeaponGen.cs" />
+     <Compile Include="Assets\Skeleton.cs" />
      <None Include="Assets\Sardine\ReadMe.txt" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
