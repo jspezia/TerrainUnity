@@ -28,6 +28,12 @@ public class Enemy : MonoBehaviour {
 
 		//ATTACK player
 		if (target) {
+			if (target.GetComponent<Stat>().level > this.GetComponent<Stat>().level) {
+				this.GetComponent<Stat>().STR += target.GetComponent<Stat>().level;
+				this.GetComponent<Stat>().AGI += target.GetComponent<Stat>().level;
+				this.GetComponent<Stat>().CON += target.GetComponent<Stat>().level;
+				this.GetComponent<Stat>().level = target.GetComponent<Stat>().level;
+			}
 			nav.destination = target.transform.position;
 			Vector3 _direction = (target.transform.position - transform.position);
 			transform.rotation = Quaternion.LookRotation(_direction);

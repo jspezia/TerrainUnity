@@ -34,7 +34,7 @@ public class Stat : MonoBehaviour {
 	}
 
 	public int expCap () {
-		return (3000 * level);
+		return (300 * level);
 	}
 
 	public int 	Accuracy(Stat Target)
@@ -57,8 +57,8 @@ public class Stat : MonoBehaviour {
 	void Update () {
 		if(XP >= expCap ())
 		{
-			level++;
 			XP = 0;
+			level++;
 		}
 	}
 
