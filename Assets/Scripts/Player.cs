@@ -6,6 +6,8 @@ public class Player : MonoBehaviour {
 
 	[SerializeField]
 	private Canvas			menuXP;
+	[SerializeField]
+	private Canvas			menuSkill;
 
 
 	//RAYCAST
@@ -117,7 +119,10 @@ public class Player : MonoBehaviour {
 		}
 
 		if (Input.GetKeyDown ("c")) {
-			menuXP.gameObject.SetActive(true);
+			menuXP.gameObject.SetActive(!menuXP.gameObject.active);
+		}
+		if (Input.GetKeyDown ("n")) {
+			menuSkill.gameObject.SetActive(!menuSkill.gameObject.active);
 		}
 		// if (anim.GetBool ("dead") || menuXP.gameObject.active) {
 		// 	return;
