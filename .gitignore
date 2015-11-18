@@ -2,3 +2,4 @@ Temp/*
 library/*
 *.csproj
 *.sln
+.DS_Store
