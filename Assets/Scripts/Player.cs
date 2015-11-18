@@ -29,10 +29,12 @@ public class Player : MonoBehaviour {
 	private Stat			stats;
 
 	private float			t0;
+	private float			t1;
 
 
 	void Start () {
 		t0 = Time.time;
+		t1 = Time.time;
 		nav = GetComponent<NavMeshAgent> ();
 		anim = GetComponent<Animator>();
 		target = null;
@@ -41,6 +43,11 @@ public class Player : MonoBehaviour {
 
 	void Update () {
 
+
+		if (Time.time - t1 > 1f && GetComponent<Stat>().HP < GetComponent<Stat>().maxHealth()) {
+			t1 = Time.time;
+			GetComponent<Stat>().HP += 1;
+		}
 		//RAYCAST
 		_ray  = Camera.main.ScreenPointToRay(Input.mousePosition);
 		Debug.DrawRay(_ray.origin, _ray.direction * 100f, Color.red);
@@ -72,10 +79,9 @@ public class Player : MonoBehaviour {
 
 			float hp = (float)script.HP / (float)script.maxHealth () * 100;
 			HP_Ennemy.GetComponent<Slider>().value = hp;
-			// HPText.GetComponent<Text> ().text = script.HP.ToString ();
+			HPText.GetComponent<Text> ().text = script.HP.ToString ();
 
-			// LvlText.GetComponent<Text>().text = "Lvl " + script.level;
-			// Name.GetComponent<Text>().text = "zombie";
+			LvlText.GetComponent<Text>().text = "Lvl " + script.level;
 			Name.GetComponent<Text>().text = script.name;
 			nav.destination = target.transform.position;
 			Panel_Ennemy.SetActive(true);

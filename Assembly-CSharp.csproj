@@ -57,14 +57,12 @@
      <Compile Include="Assets\Scripts\MenuStatHandler.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Sardine.cs" />
+     <Compile Include="Assets\Scripts\Skeleton.cs" />
      <Compile Include="Assets\Scripts\Spawn.cs" />
+     <Compile Include="Assets\Scripts\Spawner.cs" />
      <Compile Include="Assets\Scripts\Stat.cs" />
      <Compile Include="Assets\Scripts\UpdateSlider.cs" />
-<<<<<<< HEAD
-=======
      <Compile Include="Assets\Scripts\WeaponGen.cs" />
->>>>>>> 2b92fc26cde7784bc2d65dc8db20d3440d0a2ccc
-     <Compile Include="Assets\Skeleton.cs" />
      <None Include="Assets\Sardine\ReadMe.txt" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
