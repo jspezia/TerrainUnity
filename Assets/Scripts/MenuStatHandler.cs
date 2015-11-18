@@ -38,11 +38,11 @@ public class MenuStatHandler : MonoBehaviour {
 
 	void Start () {
 		playerStats = player.GetComponent<Stat> ();
-		str.text = "Stren. " + playerStats.STR.ToString ();
-		agi.text = "Agility " + playerStats.AGI.ToString ();
+		str.text = "Stren.     " + playerStats.STR.ToString ();
+		agi.text = "Agility.   " + playerStats.AGI.ToString ();
 		con.text = "Constit. " + playerStats.CON.ToString ();
-		arm.text = "Armor " + playerStats.Armor.ToString ();
-		pts.text = "UP Pts " + playerStats.characs.ToString ();
+		arm.text = "Armor    " + playerStats.Armor.ToString ();
+		pts.text = "UP Pts   " + playerStats.characs.ToString ();
 	}
 
 	void Update () {
@@ -51,11 +51,11 @@ public class MenuStatHandler : MonoBehaviour {
 		string level = playerStats.level.ToString ();
 
 		lvl.text = "Maya[Lv." + level + "]";
-		dam.text = "Dam. " + min + "-" + max;
-		hp.text = "Health " + playerStats.HP.ToString ();
-		xp.text = "XP " + playerStats.XP.ToString ().ToString ();
-		nextXP.text = "N. XP " + playerStats.expCap ().ToString ();
-		cre.text = "Credits " + playerStats.money.ToString ();
+		dam.text = "Dam.       " + min + "-" + max;
+		hp.text = "Health   " + playerStats.HP.ToString ();
+		xp.text = "XP             " + playerStats.XP.ToString ().ToString ();
+		nextXP.text = "N. XP       " + playerStats.expCap ().ToString ();
+		cre.text = "Credits  " + playerStats.money.ToString ();
 	}
 
 	void checkRemainingPoints () {
