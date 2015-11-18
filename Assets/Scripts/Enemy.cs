@@ -28,6 +28,9 @@ public class Enemy : MonoBehaviour {
 
 		//ATTACK player
 		if (target) {
+			if (target.GetComponent<Stat>().level != this.GetComponent<Stat>().level) {
+				this.GetComponent<Stat>().XP += 300;
+			}
 			nav.destination = target.transform.position;
 			Vector3 _direction = (target.transform.position - transform.position);
 			transform.rotation = Quaternion.LookRotation(_direction);

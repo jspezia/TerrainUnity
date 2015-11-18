@@ -34,7 +34,7 @@ public class Stat : MonoBehaviour {
 	}
 
 	public int expCap () {
-		return (3000 * level);
+		return (300 * level);
 	}
 
 	public int 	Accuracy(Stat Target)
@@ -57,8 +57,15 @@ public class Stat : MonoBehaviour {
 	void Update () {
 		if(XP >= expCap ())
 		{
+			if (transform.tag == "Ennemy") {
+				Debug.Log("levelup");
+				STR += 1;
+				AGI += 1;
+				CON += 1;
+			}
+			else
+				XP = 0;
 			level++;
-			XP = 0;
 		}
 	}
 
