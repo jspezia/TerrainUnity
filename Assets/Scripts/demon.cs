@@ -27,8 +27,10 @@ public class demon : MonoBehaviour {
 	void Update () {
 		// DELETE demon after death
 		if (is_dead) {
-			if (Time.time - t0 > 1.5f)
+			if (Time.time - t0 > 1.5f) {
 				Destroy(gameObject);
+				Time.timeScale = 0f;
+			}
 			return;
 		}
 
