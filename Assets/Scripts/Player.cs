@@ -44,6 +44,10 @@ public class Player : MonoBehaviour {
 
 	void Update () {
 
+		//RESTART
+		if (this.GetComponent<Stat>().HP <= 0) {
+			Application.LoadLevel(Application.loadedLevel);
+		}
 
 		if (Time.time - t1 > 1f && GetComponent<Stat>().HP < GetComponent<Stat>().maxHealth()) {
 			t1 = Time.time;

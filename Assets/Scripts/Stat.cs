@@ -56,6 +56,7 @@ public class Stat : MonoBehaviour {
 	void Update () {
 		if(XP >= expCap ())
 		{
+			characs += 3;
 			XP = 0;
 			level++;
 		}
