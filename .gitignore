@@ -1,2 +1,4 @@
 Temp/*
 library/*
+*.csproj
+*.sln
