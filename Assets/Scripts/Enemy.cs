@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour {
 	void Start () {
 		nav = GetComponent<NavMeshAgent>();
 		anim = GetComponent<Animator>();
-		nav.speed = 12;
+		// nav.speed = 12;
 		stats = GetComponent<Stat> ();
 		nav.destination = transform.position;
 	}
