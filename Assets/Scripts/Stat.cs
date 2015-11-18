@@ -57,14 +57,7 @@ public class Stat : MonoBehaviour {
 	void Update () {
 		if(XP >= expCap ())
 		{
-			if (transform.tag == "Ennemy") {
-				Debug.Log("levelup");
-				STR += 1;
-				AGI += 1;
-				CON += 1;
-			}
-			else
-				XP = 0;
+			XP = 0;
 			level++;
 		}
 	}
