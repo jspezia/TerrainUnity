@@ -17,7 +17,6 @@ public class Stat : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		level = 1;
-		characs = 3;
 		HP = maxHealth ();
 	}
 

@@ -4,9 +4,8 @@ using System.Collections;
 
 public class Player : MonoBehaviour {
 
-	//NOT USE
-	// [SerializeField]
-	// private Canvas			menuXP;
+	[SerializeField]
+	private Canvas			menuXP;
 
 
 	//RAYCAST
@@ -117,10 +116,9 @@ public class Player : MonoBehaviour {
 			anim.SetBool ("dead", true);
 		}
 
-		// NOT USE
-		// if (Input.GetKeyDown ("c")) {
-		// 	menuXP.gameObject.SetActive(true);
-		// }
+		if (Input.GetKeyDown ("c")) {
+			menuXP.gameObject.SetActive(true);
+		}
 		// if (anim.GetBool ("dead") || menuXP.gameObject.active) {
 		// 	return;
 		// }
